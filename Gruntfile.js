@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 processors: [
                     require('pixrem')(),
                     require('autoprefixer')({
-                        browsers: ['last 2 version']
+                        overrideBrowserslist: ['last 2 version']
                     }),
                     require('cssnano')({
                         preset: ['default', {
