@@ -39,8 +39,8 @@
         });
         this.elementInputs = null;
         this.elementCount = 0;
-        this.addLink = (this.options.addButtonHtml) ? $($this.options.addButtonHtml) : $('<a>').addClass('add').css('cursor', 'pointer').html('<i class="fa fa-lg fa-plus-circle"></i><span class="sr-only">' + this.options.i18n.addText + '</span>');
-        this.removeLink = (this.options.removeButtonHtml) ? $($this.options.removeButtonHtml) : $('<a></i>').addClass('remove').css('cursor', 'pointer').html('<i class="fa fa-lg fa-minus-circle"></i><span class="sr-only">' + this.options.i18n.removeText + '</span>');
+        this.addLink = (this.options.addButtonHtml) ? $(this.options.addButtonHtml) : $('<a>').addClass('add').css('cursor', 'pointer').html('<i class="fa fa-lg fa-plus-circle"></i><span class="sr-only">' + this.options.i18n.addText + '</span>');
+        this.removeLink = (this.options.removeButtonHtml) ? $(this.options.removeButtonHtml) : $('<a></i>').addClass('remove').css('cursor', 'pointer').html('<i class="fa fa-lg fa-minus-circle"></i><span class="sr-only">' + this.options.i18n.removeText + '</span>');
         this.escSeparator = this.options.separator.replace(/[\-\[\]\/{}()*+?.\\^$|]/g, '\\$&');
         this.escInputSeparator = this.options.inputSeparator.replace(/[\-\[\]\/{}()*+?.\\^$|]/g, '\\$&');
         this.trimEx = new RegExp('^(' + this.escSeparator + ')+|(' + this.escSeparator + ')+$', 'gm');
