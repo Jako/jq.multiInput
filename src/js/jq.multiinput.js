@@ -3,7 +3,12 @@
 ;
 (function ($, window, document, undefined) {
 
-    var pluginName = 'multiInput',
+    var pluginName = "multiInput",
+        i18n = {
+            limitMessage: "Limit reached",
+            addText: "Add",
+            removeText: "Remove",
+        },
         defaults = {
             input: false,
             clearInputs: 1,
@@ -14,13 +19,9 @@
             onElementAdd: null,
             onElementRemove: null,
             json: false,
-            addButtonHtml: null,
-            removeButtonHtml: null,
-            i18n: {
-                limitMessage: 'Limit reached',
-                addText: 'Add',
-                removeText: 'Remove'
-            }
+            addButtonHtml: '<a class="add" style="cursor: pointer;"><i class="fa fa-lg fa-plus-circle"></i><span class="sr-only">' + i18n.addText + '</span></a>',
+            removeButtonHtml: '<a class="remove" style="cursor: pointer;"><i class="fa fa-lg fa-minus-circle"></i><span class="sr-only">' + i18n.removeText + '</span></a>',
+            i18n: i18n
         };
 
     // multiInput
@@ -39,8 +40,8 @@
         });
         this.elementInputs = null;
         this.elementCount = 0;
-        this.addLink = (this.options.addButtonHtml) ? $(this.options.addButtonHtml) : $('<a>').addClass('add').css('cursor', 'pointer').html('<i class="fa fa-lg fa-plus-circle"></i><span class="sr-only">' + this.options.i18n.addText + '</span>');
-        this.removeLink = (this.options.removeButtonHtml) ? $(this.options.removeButtonHtml) : $('<a></i>').addClass('remove').css('cursor', 'pointer').html('<i class="fa fa-lg fa-minus-circle"></i><span class="sr-only">' + this.options.i18n.removeText + '</span>');
+        this.addLink = $(this.options.addButtonHtml);
+        this.removeLink = $(this.options.removeButtonHtml);
         this.escSeparator = this.options.separator.replace(/[\-\[\]\/{}()*+?.\\^$|]/g, '\\$&');
         this.escInputSeparator = this.options.inputSeparator.replace(/[\-\[\]\/{}()*+?.\\^$|]/g, '\\$&');
         this.trimEx = new RegExp('^(' + this.escSeparator + ')+|(' + this.escSeparator + ')+$', 'gm');
