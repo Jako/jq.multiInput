@@ -1,9 +1,9 @@
 {
   "name": "jq.multiinput",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
+    "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
     "grunt": "^1.1.0",
     "grunt-banner": "^0.6.0",
@@ -11,7 +11,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "pixrem": "^5.0.0"
   }
 }

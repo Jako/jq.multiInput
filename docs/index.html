@@ -15,7 +15,10 @@
         <div class="col-xs-12">
             <h1>MultiInput Demo</h1>
             <form>
-                <textarea class="form-control" id="participants" name="participants">[{"tn_firstname":"ab","tn_lastname":"cd"},{"tn_firstname":"ef","tn_lastname":"gh"}]</textarea>
+                <textarea class="form-control" id="participants" name="participants">
+                    [{"tn_firstname":"ab","tn_lastname":"cd"},
+                    {"tn_firstname":"ef","tn_lastname":"gh"}]
+                </textarea>
             </form>
         </div>
     </div>
@@ -23,6 +26,7 @@
 <script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jako/jq.multiInput/dist/js/jq.multiinput.min.js"></script>
+<!--script src="../src/js/jq.multiinput.js"></script-->
 <script>
     $(document).ready(function () {
         $('#participants').multiInput({
@@ -39,9 +43,23 @@
             limit: 10,
             onElementAdd: function (el, plugin) {
                 console.log(plugin.elementCount);
+                var inputs = $(':input', $(el));
+                var values = {};
+                $.each(inputs, function () {
+                    var name = $(this).attr('name');
+                    values[name] = $(this).val();
+                });
+                console.log(JSON.stringify(values));
             },
             onElementRemove: function (el, plugin) {
                 console.log(plugin.elementCount);
+                var inputs = $(':input', $(el));
+                var values = {};
+                $.each(inputs, function () {
+                    var name = $(this).attr('name');
+                    values[name] = $(this).val();
+                });
+                console.log(JSON.stringify(values));
             }
         });
     });

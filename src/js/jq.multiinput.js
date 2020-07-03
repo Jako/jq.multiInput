@@ -150,6 +150,7 @@
             });
             var remove = _this.removeLink.clone(false).click(function (e) {
                 e.preventDefault();
+                var el = $(this).parents('.inputWrapper').clone();
                 if ($('.inputWrapper', _this.elementInputs).length > 1) {
                     var number = $(this).parents('.inputWrapper').index();
                     $(this).parents('.inputWrapper').nextAll('.inputWrapper').each(function (index) {
