@@ -86,10 +86,10 @@ module.exports = function (grunt) {
     });
 
     //load the packages
+    grunt.loadNpmTasks('@lodder/grunt-postcss');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
 
     //register the task
