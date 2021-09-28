@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "devDependencies": {
-    "autoprefixer": "^10.3.4",
+    "autoprefixer": "^10.3.6",
     "cssnano": "^5.0.8",
     "grunt": "^1.4.1",
     "grunt-banner": "^0.6.0",
