@@ -6,7 +6,7 @@
       "autoprefixer": "^10.4.7",
       "cssnano": "^5.1.9",
       "date-format": "^4.0.10",
-      "gulp": "^4.0.2",
+      "gulp": "^5.0.0",
       "gulp-concat": "^2.6.1",
       "gulp-footer": "^2.1.0",
       "gulp-header": "^2.0.9",
